@@ -4,7 +4,7 @@ require_once 'library/CE/NE_Network.php';
 
 use Clientexec\Registrars\LogicBoxes;
 
-class PluginResellbiz extends RegistrarPlugin
+class PluginCornq extends RegistrarPlugin
 {
     public $features = [
         'nameSuggest' => true,
@@ -20,12 +20,12 @@ class PluginResellbiz extends RegistrarPlugin
         parent::__construct($user);
 
         $this->api = new LogicBoxes(
-            $this->settings->get('plugin_resellbiz_Reseller ID'),
-            $this->settings->get('plugin_resellbiz_API Key'),
-            $this->settings->get('plugin_resellbiz_Password'),
+            $this->settings->get('plugin_cornq_Reseller ID'),
+            $this->settings->get('plugin_cornq_API Key'),
+            $this->settings->get('plugin_cornq_Password'),
             $this->user,
             $this->recordTypes,
-            $this->settings->get('plugin_resellbiz_Use testing server')
+            $this->settings->get('plugin_cornq_Use testing server')
         );
     }
 
@@ -35,26 +35,26 @@ class PluginResellbiz extends RegistrarPlugin
             lang('Plugin Name') => [
                 'type' => 'hidden',
                 'description' => lang('How CE sees this plugin (not to be confused with the Signup Name)'),
-                'value' => lang('ResellBiz')
+                'value' => lang('cornQ')
             ],
             lang('Use testing server') => [
                 'type' => 'yesno',
-                'description' => lang('Select Yes if you wish to use the Resell.biz testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.'),
+                'description' => lang('Select Yes if you wish to use the cornQ.com testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.'),
                 'value' => 0
             ],
             lang('Reseller ID') => [
                 'type' => 'text',
-                'description' => lang('Enter your Resell.biz Reseller ID.  This can be found in your Resell.biz    account by going to your profile link, in the top right corner.'),
+                'description' => lang('Enter your cornQ.com Reseller ID.  This can be found in your cornQ.com    account by going to your profile link, in the top right corner.'),
                 'value' => ''
             ],
             lang('Password') => [
                 'type' => 'password',
-                'description'  => lang('Enter the password for your Resell.biz reseller account.'),
+                'description'  => lang('Enter the password for your cornQ.com reseller account.'),
                 'value' => ''
             ],
             lang('API Key') => [
                 'type' => 'text',
-                'description' => lang('Enter your API Key for your Resell.biz reseller account.  You should use this instead of your password, however you still may use your password instead.'),
+                'description' => lang('Enter your API Key for your cornQ.com reseller account.  You should use this instead of your password, however you still may use your password instead.'),
                 'value' => ''
             ],
             lang('Supported Features')  => [
