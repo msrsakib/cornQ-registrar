@@ -39,22 +39,22 @@ class PluginCornq extends RegistrarPlugin
             ],
             lang('Use testing server') => [
                 'type' => 'yesno',
-                'description' => lang('Select Yes if you wish to use the cornQ.com testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.'),
+                'description' => lang('Select Yes if you wish to use the cornQ testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.'),
                 'value' => 0
             ],
             lang('Reseller ID') => [
                 'type' => 'text',
-                'description' => lang('Enter your cornQ.com Reseller ID.  This can be found in your cornQ.com    account by going to your profile link, in the top right corner.'),
+                'description' => lang('Enter your cornQ Reseller ID.  This can be found in your cornQ    account by going to your profile link, in the top right corner.'),
                 'value' => ''
             ],
             lang('Password') => [
                 'type' => 'password',
-                'description'  => lang('Enter the password for your cornQ.com reseller account.'),
+                'description'  => lang('Enter the password for your cornQ reseller account.'),
                 'value' => ''
             ],
             lang('API Key') => [
                 'type' => 'text',
-                'description' => lang('Enter your API Key for your cornQ.com reseller account.  You should use this instead of your password, however you still may use your password instead.'),
+                'description' => lang('Enter your API Key for your cornQ reseller account.  You should use this instead of your password, however you still may use your password instead.'),
                 'value' => ''
             ],
             lang('Supported Features')  => [
@@ -219,18 +219,18 @@ class PluginCornq extends RegistrarPlugin
     //     $result = $this->_makePostRequest('/domains/add-cns', $arguments);
 
     //     if ($result === false) {
-    //         throw new Exception('A connection issued occurred while connecting to ResellerClub.');
+    //         throw new Exception('A connection issued occurred while connecting to cornQ.');
     //     }
     //     if (isset($result->actionstatus) && $result->actionstatus == 'Success') {
-    //         CE_Lib::log(4, 'ResellerClub addition of child name server ' . $params['nsname'] . ' successful.');
+    //         CE_Lib::log(4, 'cornQ addition of child name server ' . $params['nsname'] . ' successful.');
     //         return $result->actiontypedesc;
     //     }
     //     if (isset($result->status) && $result->status == 'ERROR') {
-    //         CE_Lib::log(4, 'ERROR: ResellerClub add child name servers failed with error: ' . $result->message);
-    //         throw new Exception('Error during ResellerClub add child name servers command.: ' . $result->message);
+    //         CE_Lib::log(4, 'ERROR: cornQ add child name servers failed with error: ' . $result->message);
+    //         throw new Exception('Error during cornQ add child name servers command.: ' . $result->message);
     //     } else {
-    //         CE_Lib::log(4, 'ERROR: ResellerClub add child name servers failed with an error.');
-    //         throw new Exception('Error during ResellerClub add child name servers command.');
+    //         CE_Lib::log(4, 'ERROR: cornQ add child name servers failed with an error.');
+    //         throw new Exception('Error during cornQ add child name servers command.');
     //     }
     // }
 
@@ -255,18 +255,18 @@ class PluginCornq extends RegistrarPlugin
     //     $result = $this->_makePostRequest('/domains/modify-cns-ip', $arguments);
 
     //     if ($result === false) {
-    //         throw new Exception('A connection issued occurred while connecting to ResellerClub.');
+    //         throw new Exception('A connection issued occurred while connecting to cornQ.');
     //     }
     //     if (isset($result->status) && $result->status == 'Success') {
-    //         CE_Lib::log(4, 'ResellerClub modification of child name server ' . $params['nsname'] . ' successful.');
+    //         CE_Lib::log(4, 'cornQ modification of child name server ' . $params['nsname'] . ' successful.');
     //         return $result->actiontypedesc;
     //     }
     //     if (isset($result->status) && $result->status == 'ERROR') {
-    //         CE_Lib::log(4, 'ERROR: ResellerClub modify child name servers failed with error: ' . $result->message);
-    //         throw new Exception('Error during ResellerClub modify child name servers command.: ' . $result->message);
+    //         CE_Lib::log(4, 'ERROR: cornQ modify child name servers failed with error: ' . $result->message);
+    //         throw new Exception('Error during cornQ modify child name servers command.: ' . $result->message);
     //     } else {
-    //         CE_Lib::log(4, 'ERROR: ResellerClub modify child name servers failed with an error.');
-    //         throw new Exception('Error during ResellerClub modify child name servers command.');
+    //         CE_Lib::log(4, 'ERROR: cornQ modify child name servers failed with an error.');
+    //         throw new Exception('Error during cornQ modify child name servers command.');
     //     }
     // }
 
