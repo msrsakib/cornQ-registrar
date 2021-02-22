@@ -1,5 +1,5 @@
-# cornQ-Clientexec-module
-Module for Domain reseller of cornQ by Clientexec
+# cornQ-Clientexec-Plugin
+cornQ Domain Reseller Plugin for Clientexec
 
 Module Source https://github.com/clientexec/resellbiz-registrar
 
